@@ -35,7 +35,7 @@ import com.qkdversion.wssDao.WSSSetupCl;
 import com.topeet.serialtest.Com;
 import com.topeet.serialtest.serial;
 /**
- * 描述:主要逻辑在此线程中执行，相当于主函数
+ * 描述:主要逻辑在子线程中执行
  * @author Ljj 2015-04-24
  */
 public class clientThread implements Runnable {
