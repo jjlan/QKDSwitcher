@@ -9,8 +9,7 @@ import android.R.integer;
 
 /**
  * 功能：数据类型转换类
- * @author hjj
- *
+ * @author Ljj
  */
 public final class MsgUtil {
 	/*

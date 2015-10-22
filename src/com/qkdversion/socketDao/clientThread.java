@@ -185,11 +185,13 @@ public class clientThread implements Runnable {
 		// 检查WSS1
 		if (!WSSSetupCl.getInstance().checkWSS(com1,Com.WSS1)) {
 			device_flag=Ack.DEVICE_3_ERR;
+			Log.i(TAG,"检查WSS1:"+device_flag);
 			return device_flag;
 		}
 		// 检查WSS2
 		if (!WSSSetupCl.getInstance().checkWSS(com2,Com.WSS2)) { 
 			device_flag=Ack.DEVICE_5_ERR;
+			Log.i(TAG,"检查WSS2:"+device_flag);
 			return device_flag;
 		}
 		device_flag=Ack.DEVICE_OK;
