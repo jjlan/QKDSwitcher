@@ -1,4 +1,4 @@
-package com.qkdversion.msgDomain;
+package com.qkdversion.domain;
 public class AckMsg {
 	private byte ack; //链路分配结果反馈
 	private int id;//记录相应Msg中的id

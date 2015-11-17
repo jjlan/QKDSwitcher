@@ -1,4 +1,4 @@
-package com.qkdversion.msgDomain;
+package com.qkdversion.domain;
 
 import android.R.integer;
 

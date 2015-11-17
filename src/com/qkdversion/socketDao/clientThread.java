@@ -1,4 +1,4 @@
-package com.qkdversion.socketDao;
+package com.qkdversion.socketdao;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,32 +6,27 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import android.R.integer;
-import android.text.InputFilter.LengthFilter;
 import android.util.Log;
-import android.widget.Switch;
 
-import com.qkdversion.OXCDomian.LengthType;
-import com.qkdversion.OXCDomian.OXCAckPara;
-import com.qkdversion.OXCDomian.OXCSetupPara;
-import com.qkdversion.msgDao.BusyDao;
-import com.qkdversion.msgDao.MsgDao;
-import com.qkdversion.msgDao.WaveDupl;
-import com.qkdversion.msgDomain.Ack;
-import com.qkdversion.msgDomain.AckMsg;
-import com.qkdversion.msgDomain.Msg;
-import com.qkdversion.msgDomain.MsgConstant;
-import com.qkdversion.msgDomain.UserMsg;
-import com.qkdversion.oxcDao.OXCSetupCl;
-import com.qkdversion.oxcService.LengthDao;
-import com.qkdversion.oxcService.OXCService;
-import com.qkdversion.socketDomain.ServerPara;
+import com.qkdversion.constant.Ack;
+import com.qkdversion.constant.MsgConstant;
+import com.qkdversion.constant.ServerConstant;
+import com.qkdversion.domain.AckMsg;
+import com.qkdversion.domain.Msg;
+import com.qkdversion.domain.UserMsg;
+import com.qkdversion.msgdao.BusyDao;
+import com.qkdversion.msgdao.MsgDao;
+import com.qkdversion.msgdao.WaveDupl;
+import com.qkdversion.oxc.constant.LengthType;
+import com.qkdversion.oxc.constant.OXCAckPara;
+import com.qkdversion.oxc.constant.OXCSetupPara;
+import com.qkdversion.oxcdao.OXCSetupCl;
+import com.qkdversion.oxcservice.LengthDao;
+import com.qkdversion.oxcservice.OXCService;
 import com.qkdversion.utils.MsgUtil;
-import com.qkdversion.wssDao.WSSSetupCl;
+import com.qkdversion.wssdao.WSSSetupCl;
 import com.topeet.serialtest.Com;
 import com.topeet.serialtest.serial;
 /**
@@ -61,7 +56,7 @@ public class clientThread implements Runnable {
 			Log.i(TAG, "Thread" + Thread.currentThread().getName());
 	        int initState= checkDevice();// 检查设备状况
 	        Log.i(TAG, "设备检测结果："+initState);
-			s = new Socket(ServerPara.Server_IP, ServerPara.Server_Port);//连接服务器
+			s = new Socket(ServerConstant.Server_IP, ServerConstant.Server_Port);//连接服务器
 			byte[] byteStatus=new byte[1];
 			byteStatus[0]=(byte)initState;
 			writeToServer(byteStatus);	// 将设备状况向服务器反馈
@@ -437,7 +432,7 @@ public class clientThread implements Runnable {
 				os = s.getOutputStream();
 				byte[] bytes=MsgUtil.IntToByte(ack.length);
 				os.write(bytes);
-				Log.i(TAG, "应带信号的一个字节为："+ack[0]);
+				Log.i(TAG, "应答信号的一个字节为："+ack[0]);
 				os.write(ack);
 			}
 		} catch (IOException e) {

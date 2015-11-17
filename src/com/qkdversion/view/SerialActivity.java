@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.qkdverson1.R;
-import com.qkdversion.OXCDomian.OXCAckPara;
-import com.qkdversion.WSSDomian.WSSCmdPara;
-import com.qkdversion.oxcDao.OXCSetupCl;
-import com.qkdversion.wssDao.WSSSetupCl;
+import com.qkdversion.oxc.constant.OXCAckPara;
+import com.qkdversion.oxcdao.OXCSetupCl;
+import com.qkdversion.wss.constant.WSSCmdPara;
+import com.qkdversion.wssdao.WSSSetupCl;
 import com.topeet.serialtest.Com;
 import com.topeet.serialtest.serial;
 

@@ -1,18 +1,17 @@
-package com.qkdversion.wssDao;
+package com.qkdversion.wssdao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.R.integer;
 import android.util.Log;
 
-import com.qkdversion.WSSDomian.WSSCmdPara;
-import com.qkdversion.msgDomain.Ack;
-import com.qkdversion.msgDomain.Msg;
-import com.qkdversion.msgDomain.MsgConstant;
-import com.qkdversion.msgDomain.UserMsg;
+import com.qkdversion.constant.Ack;
+import com.qkdversion.constant.MsgConstant;
+import com.qkdversion.domain.Msg;
+import com.qkdversion.domain.UserMsg;
+import com.qkdversion.wss.constant.WSSCmdPara;
 import com.topeet.serialtest.Com;
 import com.topeet.serialtest.serial;
 

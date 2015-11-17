@@ -1,13 +1,13 @@
-package com.qkdversion.oxcDao;
+package com.qkdversion.oxcdao;
 
 import android.util.Log;
 
-import com.qkdversion.OXCDomian.OXCAckPara;
-import com.qkdversion.OXCDomian.OXCSetupPara;
+import com.qkdversion.oxc.constant.OXCAckPara;
+import com.qkdversion.oxc.constant.OXCSetupPara;
 /*
  * 与OXC进行通信线程
  */
-import com.qkdversion.oxcService.OXCService;
+import com.qkdversion.oxcservice.OXCService;
 
 public class OXCSetupThread implements Runnable{
 

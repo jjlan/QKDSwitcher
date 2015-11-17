@@ -23,14 +23,14 @@
             </intent-filter>
         </activity>
          <activity android:name="com.qkdversion.view.SerialActivity"></activity>
-         <receiver android:name="com.qkdversion.view.AutoReceiver" 
+      <receiver android:name="com.qkdversion.view.AutoReceiver" 
           >
           <intent-filter >
               <action android:name="android.intent.action.BOOT_COMPLETED"/>
               <category android:name="android.intent.category.HOME" />
           </intent-filter>
       </receiver>
-         
+      <service android:name="com.qkdversion.service.QkdService"></service>   
       
     </application>
      

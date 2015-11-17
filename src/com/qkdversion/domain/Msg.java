@@ -1,4 +1,4 @@
-package com.qkdversion.msgDomain;
+package com.qkdversion.domain;
 
 import java.util.ArrayList;
 import java.util.List;

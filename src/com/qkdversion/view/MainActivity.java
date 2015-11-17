@@ -9,9 +9,10 @@ import java.net.UnknownHostException;
 import javax.security.auth.PrivateCredentialPermission;
 
 import com.example.qkdverson1.R;
-import com.qkdversion.oxcDao.OXCSetupThread;
-import com.qkdversion.socketDao.clientThread;
-import com.qkdversion.socketDomain.ServerPara;
+import com.qkdversion.constant.ServerConstant;
+import com.qkdversion.oxcdao.OXCSetupThread;
+import com.qkdversion.service.QkdService;
+import com.qkdversion.socketdao.clientThread;
 import com.topeet.serialtest.serial;
 
 import android.app.Activity;
@@ -57,18 +58,22 @@ public class MainActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onDestroy();
 		ackView.setText("");
+		Intent intent=new Intent(this,QkdService.class);
+		stopService(intent);
 		android.os.Process.killProcess(android.os.Process.myPid());
 	}
 	//串口测试
-	private void testSerial(){
+/*	private void testSerial(){
 		Intent intent=new Intent(MainActivity.this,SerialActivity.class);
 		startActivity(intent);
-	}
+	}*/
 	/*
-	 * 连接服务器，与服务器交互
+	 * 开启服务，在服务中开启子线程
 	 */
 	private void socketServer(){
-	
-		new Thread(new clientThread()).start();
+	  //new Thread(new clientThread()).start();
+		Log.i("TAG","socketServer开启服务");
+	 Intent intent=new Intent(this,QkdService.class);
+	  startService(intent);
 	}
 }

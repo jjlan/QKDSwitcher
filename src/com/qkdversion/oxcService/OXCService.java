@@ -1,12 +1,11 @@
-package com.qkdversion.oxcService;
+package com.qkdversion.oxcservice;
 
 
 import android.util.Log;
 
-
-import com.qkdversion.OXCDomian.OXCSetupPara;
-import com.qkdversion.msgDomain.Ack;
-import com.qkdversion.oxcDao.OXCSetupCl;
+import com.qkdversion.constant.Ack;
+import com.qkdversion.oxc.constant.OXCSetupPara;
+import com.qkdversion.oxcdao.OXCSetupCl;
 
 /**
  * 单例模式提供OXC服务

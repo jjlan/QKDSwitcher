@@ -1,12 +1,12 @@
-package com.qkdversion.oxcService;
+package com.qkdversion.oxcservice;
 
 import java.util.List;
 
-import com.qkdversion.OXCDomian.LengthType;
-import com.qkdversion.OXCDomian.OXCSetupPara;
-import com.qkdversion.msgDomain.Msg;
-import com.qkdversion.msgDomain.MsgConstant;
-import com.qkdversion.msgDomain.UserMsg;
+import com.qkdversion.constant.MsgConstant;
+import com.qkdversion.domain.Msg;
+import com.qkdversion.domain.UserMsg;
+import com.qkdversion.oxc.constant.LengthType;
+import com.qkdversion.oxc.constant.OXCSetupPara;
 
 /**
  * 波长级处理类
@@ -239,6 +239,4 @@ public class LengthDao {
 		}
 		return command3;
 	 }
-	 
-
 }

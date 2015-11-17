@@ -1,4 +1,4 @@
-package com.qkdversion.WSSDomian;
+package com.qkdversion.wss.constant;
 
 public class WSSCmdPara {
 	/**

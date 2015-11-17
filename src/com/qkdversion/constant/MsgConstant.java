@@ -1,7 +1,5 @@
-package com.qkdversion.msgDomain;
+package com.qkdversion.constant;
 
-import android.R.integer;
-import android.R.string;
 
 public class MsgConstant {
 	//表示数据包来源从第一路过来

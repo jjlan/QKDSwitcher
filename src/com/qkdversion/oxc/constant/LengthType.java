@@ -1,4 +1,4 @@
-package com.qkdversion.OXCDomian;
+package com.qkdversion.oxc.constant;
 
 import android.R.integer;
 
